@@ -1,14 +1,15 @@
 <?php
 
-require_once './core/Controller.php';
+require_once './app/Controllers/PrivateController.php';
 require_once './app/Models/UserModels.php';
 
-class UserController extends Controller
+class UserController extends PrivateController
 {
     private $model;
 
     function __construct()
     {
+        parent::__construct();
         $this->model = new UserModel();
     }
 

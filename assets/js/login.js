@@ -5,8 +5,7 @@ const login = () => {
         field.name = field.name.replace('Login', '');
         form[field.name] = field.value;
     })
-
-    console.log(form);
+    
     $.ajax({
         url: baseURL + '/login',
         type: 'POST',
